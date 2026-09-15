@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Reading responses and coursework on civic, social impact, and public interest technology."
+    />
+    <title>Same Block, Three Different Problems · Reading Responses</title>
+
+    <!-- Bootstrap from CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#712cf9" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="blog.css" rel="stylesheet" />
+
+    <style>
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+      /* Keep the reading column comfortable at wide viewports */
+      .post-column {
+        max-width: 46rem;
+      }
+      figure.post-figure {
+        margin: 2.25rem 0;
+      }
+      /* Let the diagram breathe wider than the text column on large screens */
+      @media (min-width: 992px) {
+        figure.post-figure {
+          margin-left: -5rem;
+          margin-right: -5rem;
+        }
+      }
+      figure.post-figure svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      figure.post-figure figcaption {
+        font-size: 0.875rem;
+        margin-top: 0.75rem;
+      }
+      .sources li {
+        margin-bottom: 0.75rem;
+        font-size: 0.925rem;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Icon sprite sheet -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        ></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path
+          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+        ></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.31.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        ></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        ></path>
+      </symbol>
+    </svg>
+
+    <!-- Light / dark toggle -->
+    <div
+      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+    >
+      <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+      >
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <header class="border-bottom lh-1 py-3 text-center">
+        <a
+          class="blog-header-logo text-body-emphasis text-decoration-none"
+          href="index.html"
+          >Reading Responses</a
+        >
+      </header>
+
+      <div class="nav-scroller py-1 mb-3 border-bottom">
+        <nav class="nav nav-underline justify-content-center gap-4">
+          <a
+            class="nav-item nav-link link-body-emphasis active"
+            href="index.html"
+            >Home</a
+          >
+          <a class="nav-item nav-link link-body-emphasis" href="#post">Week 1</a>
+        </nav>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="col-lg-8 px-0">
+          <h1 class="display-4 fst-italic">
+            Same Block, Three Different Issues
+          </h1>
+          <p class="lead my-3">
+            Take one case. A neighborhood where households cannot get reliable
+            internet at home. But label it three difference ways and watch the problem
+            itself change underneath you.
+          </p>
+          <p class="lead mb-0 text-body-secondary" style="font-size: 1rem">
+            Week 1 · September 14, 2026
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 post-column">
+          <article class="blog-post" id="post">
+            <p>
+              Take a neighborhood where a lot of households cannot get reliable
+              internet at home. Everyone agrees that is a problem. Almost nobody
+              agrees on what the problem is. Ask a civic technologist, then
+              somebody who works in public interest technology, then a community
+              technologist, and you get three different projects for the same
+              block, each with its own budget and its own definition of winning.
+            </p>
+
+            <p>
+              That is the argument. These three labels are not synonyms and they
+              are not describing the software, because the software barely
+              matters here. The label picks the problem. Everything downstream,
+              the build, the money, the scorecard, follows from that first
+              choice, and the first choice is made by whoever holds the label.
+            </p>
+
+            <p>
+              McGuinness and Schank make a version of this point with open data,
+              borrowing it from Harlan Yu and David Robinson. Budapest and
+              Szeged publish clean machine-readable transit schedules while
+              Hungary slides toward authoritarianism. Open, governmental, and no
+              help whatsoever. You cannot read the politics off the artifact.
+            </p>
+
+            <h3>Civic technology names a missing map</h3>
+
+            <p>
+              Under this framing, outside technologists own the problem
+              statement, and the problem is that nobody has good data on where
+              service actually fails. So a group builds a speed-test app,
+              publishes a coverage map, and hands it to reporters and the city
+              council. McGuinness and Schank describe the posture exactly,
+              technologists working "outside of or adjacent to government" and
+              using open data "to pressure government to be more responsive,"
+              and they refuse the label for their own work because it keeps an
+              "outsider hacker patina." Success arrives fast and photographs
+              well. The map is live. The data is
+              public. The story ran. Nobody here has standing to say the project
+              missed, because the people who defined the problem are the same
+              people grading it, and they can move to the next city whenever
+              they like.
+            </p>
+
+            <h3>Public interest technology makes it the city's problem</h3>
+
+            <p>
+              This framing starts somewhere else entirely, because its founding
+              claim is that government is the instrument. "There is no solving
+              the world's hardest problems without governments and institutions
+              that really work for people," McGuinness and Schank write, and
+              their preface closes on the line that the role of government is to
+              help all people. So the problem gets restated as something a city
+              can own. Residents cannot navigate the subsidy enrollment, or the
+              city has no digital inclusion program worth the name. The city
+              stands up a broadband office, redesigns how people sign up, and
+              measures adoption, which is exactly the design, data and delivery
+              loop the book is built around. Real improvement. Also a quiet
+              substitution, because the block is no longer the client. The city
+              is, and the city decides when it has done enough.
+            </p>
+
+            <h3>Community technology asks who owns the wire</h3>
+
+            <p>
+              Hand the problem statement to the neighborhood and the answer
+              changes shape. The problem is not the map and not the enrollment
+              form. It is that the block depends on infrastructure nobody who
+              lives there controls. <em>#MoreThanCode</em> lists building a
+              community-controlled mesh network among its practitioner success
+              stories and points to Detroit, Philadelphia and Red Hook in New
+              York as models worth replicating. The report also argues that
+              infrastructure projects like these are the best openings to
+              "create citywide coalitions, connect diverse actors, and build
+              community power." What gets built is a network plus a set of
+              neighbors trained to keep it running. Success is the kind that
+              reads badly in a grant report. The network works, and the people
+              on the block maintain it after the technologist goes home.
+            </p>
+
+            <figure class="post-figure">
+              <svg
+                viewBox="0 0 920 520"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-labelledby="framing-title framing-desc"
+              >
+                <title id="framing-title">
+                  One project defined three ways by three different labels
+                </title>
+                <desc id="framing-desc">
+                  A comparison chart with three columns and four rows, applying
+                  each label to the same case, home internet access in a
+                  neighborhood that lacks it. The columns are Civic Technology,
+                  Public Interest Technology, and Community Technology. The first
+                  row asks what problem the label names. Civic technology says
+                  nobody has good data on where service actually fails. Public
+                  interest technology says residents cannot navigate the city's
+                  subsidy enrollment. Community technology says the block depends
+                  on infrastructure nobody living there controls. The second row
+                  asks what gets built. Civic technology builds a speed-test app
+                  and an open coverage map, handed to the press. Public interest
+                  technology builds a broadband office and a redesigned
+                  enrollment process. Community technology builds a mesh network
+                  plus neighbors trained to maintain it. The third row asks what
+                  counts as done. Civic technology answers that the map is live,
+                  the data is public and the story ran. Public interest
+                  technology answers that enrollment climbs and more households
+                  are connected. Community technology answers that the network
+                  runs and the neighbors run it without you. The fourth row asks
+                  who can call the project a failure. Civic technology answers
+                  nobody, because the mappers move on to the next city. Public
+                  interest technology answers the city, checking its own numbers.
+                  Community technology answers the stewards, who live on it.
+                </desc>
+
+                <rect x="185" y="14" width="235" height="4" fill="#6A8EAE" />
+                <rect x="430" y="14" width="235" height="4" fill="#7E6BA8" />
+                <rect x="675" y="14" width="235" height="4" fill="#4F8A6B" />
+
+                <text
+                  x="302"
+                  y="42"
+                  text-anchor="middle"
+                  font-size="15"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  Civic Technology
+                </text>
+                <text
+                  x="547"
+                  y="42"
+                  text-anchor="middle"
+                  font-size="15"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  Public Interest Tech
+                </text>
+                <text
+                  x="792"
+                  y="42"
+                  text-anchor="middle"
+                  font-size="15"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  Community Technology
+                </text>
+
+                <!-- ROW 1 -->
+                <text
+                  x="165"
+                  y="98"
+                  text-anchor="end"
+                  font-size="13"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  The problem
+                </text>
+                <text
+                  x="165"
+                  y="116"
+                  text-anchor="end"
+                  font-size="13"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  it names
+                </text>
+
+                <rect
+                  x="185"
+                  y="56"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.10)"
+                  stroke="currentColor"
+                  stroke-opacity="0.22"
+                />
+                <rect
+                  x="430"
+                  y="56"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.10)"
+                  stroke="currentColor"
+                  stroke-opacity="0.22"
+                />
+                <rect
+                  x="675"
+                  y="56"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.10)"
+                  stroke="currentColor"
+                  stroke-opacity="0.22"
+                />
+
+                <text x="201" y="90" font-size="13" fill="currentColor">
+                  <tspan x="201" dy="0">Nobody has good data</tspan>
+                  <tspan x="201" dy="19">on where service</tspan>
+                  <tspan x="201" dy="19">actually fails</tspan>
+                </text>
+                <text x="446" y="90" font-size="13" fill="currentColor">
+                  <tspan x="446" dy="0">Residents cannot</tspan>
+                  <tspan x="446" dy="19">navigate the city's</tspan>
+                  <tspan x="446" dy="19">subsidy enrollment</tspan>
+                </text>
+                <text x="691" y="90" font-size="13" fill="currentColor">
+                  <tspan x="691" dy="0">The block depends on</tspan>
+                  <tspan x="691" dy="19">infrastructure nobody</tspan>
+                  <tspan x="691" dy="19">living there controls</tspan>
+                </text>
+
+                <!-- ROW 2 -->
+                <text
+                  x="165"
+                  y="212"
+                  text-anchor="end"
+                  font-size="13"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  What gets
+                </text>
+                <text
+                  x="165"
+                  y="230"
+                  text-anchor="end"
+                  font-size="13"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  built
+                </text>
+
+                <rect
+                  x="185"
+                  y="170"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.10)"
+                  stroke="currentColor"
+                  stroke-opacity="0.22"
+                />
+                <rect
+                  x="430"
+                  y="170"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.10)"
+                  stroke="currentColor"
+                  stroke-opacity="0.22"
+                />
+                <rect
+                  x="675"
+                  y="170"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.10)"
+                  stroke="currentColor"
+                  stroke-opacity="0.22"
+                />
+
+                <text x="201" y="204" font-size="13" fill="currentColor">
+                  <tspan x="201" dy="0">A speed-test app and</tspan>
+                  <tspan x="201" dy="19">an open coverage map,</tspan>
+                  <tspan x="201" dy="19">handed to the press</tspan>
+                </text>
+                <text x="446" y="204" font-size="13" fill="currentColor">
+                  <tspan x="446" dy="0">A broadband office and</tspan>
+                  <tspan x="446" dy="19">a redesigned enrollment</tspan>
+                  <tspan x="446" dy="19">process</tspan>
+                </text>
+                <text x="691" y="204" font-size="13" fill="currentColor">
+                  <tspan x="691" dy="0">A mesh network, plus</tspan>
+                  <tspan x="691" dy="19">neighbors trained to</tspan>
+                  <tspan x="691" dy="19">keep it running</tspan>
+                </text>
+
+                <!-- ROW 3 -->
+                <text
+                  x="165"
+                  y="326"
+                  text-anchor="end"
+                  font-size="13"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  What counts
+                </text>
+                <text
+                  x="165"
+                  y="344"
+                  text-anchor="end"
+                  font-size="13"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  as done
+                </text>
+
+                <rect
+                  x="185"
+                  y="284"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.10)"
+                  stroke="currentColor"
+                  stroke-opacity="0.22"
+                />
+                <rect
+                  x="430"
+                  y="284"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.10)"
+                  stroke="currentColor"
+                  stroke-opacity="0.22"
+                />
+                <rect
+                  x="675"
+                  y="284"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.10)"
+                  stroke="currentColor"
+                  stroke-opacity="0.22"
+                />
+
+                <text x="201" y="318" font-size="13" fill="currentColor">
+                  <tspan x="201" dy="0">The map is live.</tspan>
+                  <tspan x="201" dy="19">The data is public.</tspan>
+                  <tspan x="201" dy="19">The story ran.</tspan>
+                </text>
+                <text x="446" y="318" font-size="13" fill="currentColor">
+                  <tspan x="446" dy="0">Enrollment climbs.</tspan>
+                  <tspan x="446" dy="19">More households</tspan>
+                  <tspan x="446" dy="19">are connected.</tspan>
+                </text>
+                <text x="691" y="318" font-size="13" fill="currentColor">
+                  <tspan x="691" dy="0">The network runs and</tspan>
+                  <tspan x="691" dy="19">the neighbors run it</tspan>
+                  <tspan x="691" dy="19">without you.</tspan>
+                </text>
+
+                <!-- ROW 4 -->
+                <text
+                  x="165"
+                  y="440"
+                  text-anchor="end"
+                  font-size="13"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  Who can call
+                </text>
+                <text
+                  x="165"
+                  y="458"
+                  text-anchor="end"
+                  font-size="13"
+                  font-weight="700"
+                  fill="currentColor"
+                >
+                  it a failure
+                </text>
+
+                <rect
+                  x="185"
+                  y="398"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.16)"
+                  stroke="currentColor"
+                  stroke-opacity="0.38"
+                />
+                <rect
+                  x="430"
+                  y="398"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.16)"
+                  stroke="currentColor"
+                  stroke-opacity="0.38"
+                />
+                <rect
+                  x="675"
+                  y="398"
+                  width="235"
+                  height="102"
+                  rx="6"
+                  fill="rgba(128,128,128,0.16)"
+                  stroke="currentColor"
+                  stroke-opacity="0.38"
+                />
+
+                <text x="201" y="432" font-size="13" fill="currentColor">
+                  <tspan x="201" dy="0">Nobody. The mappers</tspan>
+                  <tspan x="201" dy="19">move on to the</tspan>
+                  <tspan x="201" dy="19">next city.</tspan>
+                </text>
+                <text x="446" y="441" font-size="13" fill="currentColor">
+                  <tspan x="446" dy="0">The city, checking</tspan>
+                  <tspan x="446" dy="19">its own numbers.</tspan>
+                </text>
+                <text x="691" y="441" font-size="13" fill="currentColor">
+                  <tspan x="691" dy="0">The stewards,</tspan>
+                  <tspan x="691" dy="19">who live on it.</tspan>
+                </text>
+              </svg>
+              <figcaption class="text-body-secondary">
+                <strong>Figure 1.</strong> One case, three labels. Built from the practitioner accounts collected in
+                <em>#MoreThanCode</em> and the definition of public interest
+                technology in McGuinness and Schank's preface.
+              </figcaption>
+            </figure>
+
+            <h3>Practitioners already know this</h3>
+
+            <p>
+              None of that is a thought experiment I imposed on the readings.
+              The <em>#MoreThanCode</em> researchers handed 96 practitioners a
+              worksheet of terms, asked which ones they claimed, and got 252
+              terms back. Eighteen claimed "public interest technology." Civic
+              tech and community technology got 28 each, and terms about access
+              and digital literacy were circled 131 times. The report concludes
+              that these differences "are important and should not be erased."
+              The reasons people gave back that up. Stevie, a foundation fellow,
+              dislikes "civic tech" and "technology for social good" because
+              both "put the technology first, rather than the people." Arata,
+              who builds technical capacity at nonprofits, hears "public
+              interest" as a Washington word that "connotes policy, power, and
+              privilege." One person made the comparison I keep coming back to.
+              Law has public interest law and it also has movement lawyering.
+              Overlapping, not the same job.
+            </p>
+
+            <p>
+              It matters who coined the word. McGuinness and Schank say outright
+              that "public interest technology" was modeled on public interest
+              law, and that the Ford Foundation set out to build the field the
+              same way it had built the legal one decades earlier. The term
+              arrived from a funder. Funders are exactly where the
+              practitioners' complaint lands. "Funders control the frame," the
+              report says, and people described rewriting grant applications in
+              whatever language was getting money that year while the money
+              itself concentrated in national organizations run by white men. So
+              the three versions of this block are not equally fundable, and
+              fundability has nothing to do with which one would help.
+            </p>
+
+            <h3>Where this is heading</h3>
+
+            <p>
+              McGuinness and Schank end their history by deciding the naming
+              fight is "unnecessarily complex," and land on "the most important
+              part, we believe, is the doing." Then look at what they describe a
+              few pages earlier. The Public Interest Technology University
+              Network grew from twenty-one universities to thirty-six in a
+              single year, and that network decides which courses run and which
+              fellowships have money behind them. The name is doing plenty of
+              work for something they say hardly matters.
+            </p>
+
+            <p>
+              The bottom row of the chart is the one I would keep. When the
+              thing goes wrong, who is allowed to say so? Under the civic tech
+              framing, nobody, because the people who set the problem can always
+              go home. Public interest technology answers with the institution,
+              which beats nothing and still leaves the city checking its own
+              homework. Only <em>#MoreThanCode</em> puts somebody outside the
+              building in that seat, recommending community design boards
+              modeled on the review boards that sign off on research, under the
+              slogan "nothing about us without us." Procedural and unglamorous.
+              Also the only one of the three that stops you from publishing a
+              beautiful map of a neighborhood that still has no internet and
+              calling it a win.
+            </p>
+
+            <hr class="mt-5" />
+
+            <h3 class="h5">Sources</h3>
+            <ol class="sources">
+              <li>
+                T4SJ Project. <em>#MoreThanCode: Practitioners Reimagine the
+                Landscape of Technology for Justice and Equity</em>. Research
+                Action Design &amp; Open Technology Institute, 2018. Executive
+                Summary, Introduction, and Ecosystem sections.
+                <a href="https://morethancode.cc/">morethancode.cc</a>
+              </li>
+              <li>
+                McGuinness, Tara Dawson, and Hana Schank. "Preface: Public
+                Interest Technology and Why It Matters." In
+                <em>Power to the Public: The Promise of Public Interest
+                Technology</em>. Princeton University Press, 2021.
+                <a href="https://www.jstor.org/stable/j.ctv18b5dbz.3"
+                  >jstor.org/stable/j.ctv18b5dbz.3</a
+                >
+              </li>
+              <li>
+                McGuinness, Tara Dawson, and Hana Schank. "How We Got Here and
+                Where We're Going." Chapter 5 in
+                <em>Power to the Public</em>. Princeton University Press, 2021.
+                <a href="https://www.jstor.org/stable/j.ctv18b5dbz.8"
+                  >jstor.org/stable/j.ctv18b5dbz.8</a
+                >
+              </li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-5 mt-4 text-center text-body-secondary bg-body-tertiary">
+      <p class="mb-0">
+        Built with <a href="https://getbootstrap.com/">Bootstrap</a> and
+        published with <a href="https://pages.github.com/">GitHub Pages</a>.
+      </p>
+      <p class="mb-0"><a href="#">Back to top</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Minimal light/dark mode handling (replaces Bootstrap's color-modes.js)
+      (() => {
+        "use strict";
+        const store = {
+          get() {
+            try {
+              return localStorage.getItem("theme");
+            } catch (e) {
+              return null;
+            }
+          },
+          set(v) {
+            try {
+              localStorage.setItem("theme", v);
+            } catch (e) {
+              /* storage unavailable, fall back to session-only */
+            }
+          },
+        };
+
+        const preferred = () =>
+          store.get() ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+
+        const apply = (theme) => {
+          document.documentElement.setAttribute(
+            "data-bs-theme",
+            theme === "auto"
+              ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : theme
+          );
+        };
+
+        apply(preferred());
+
+        const showActive = (value) => {
+          const btn = document.querySelector("#bd-theme");
+          if (!btn) return;
+          const active = document.querySelector(
+            `[data-bs-theme-value="${value}"]`
+          );
+          document.querySelectorAll("[data-bs-theme-value]").forEach((el) => {
+            el.classList.remove("active");
+            el.setAttribute("aria-pressed", "false");
+            const check = el.querySelector(".bi.ms-auto");
+            if (check) check.classList.add("d-none");
+          });
+          if (active) {
+            active.classList.add("active");
+            active.setAttribute("aria-pressed", "true");
+            const check = active.querySelector(".bi.ms-auto");
+            if (check) check.classList.remove("d-none");
+            const icon = active.querySelector("svg use")?.getAttribute("href");
+            const activeIcon = btn.querySelector(".theme-icon-active use");
+            if (icon && activeIcon) activeIcon.setAttribute("href", icon);
+          }
+          btn.setAttribute("aria-label", `Toggle theme (${value})`);
+        };
+
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", () => {
+            const stored = store.get();
+            if (stored !== "light" && stored !== "dark") apply(preferred());
+          });
+
+        window.addEventListener("DOMContentLoaded", () => {
+          showActive(store.get() || "auto");
+          document.querySelectorAll("[data-bs-theme-value]").forEach((el) => {
+            el.addEventListener("click", () => {
+              const value = el.getAttribute("data-bs-theme-value");
+              store.set(value);
+              apply(value);
+              showActive(value);
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
