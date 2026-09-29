@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Reading responses and coursework on civic, social impact, and public interest technology."
+    />
+    <!-- Change the page title below to this post’s title -->
+    <title>Massachusetts and Boston ADU Rules and a Proposed ADU Screening Tool · Reading Responses</title>
+
+    <!-- Bootstrap from CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#712cf9" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Formerly blog.css, inlined so this page is a single self-contained file */
+      .blog-header-logo {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+        font-size: 2.25rem;
+      }
+      .blog-header-logo:hover {
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      }
+      .blog-post {
+        margin-bottom: 4rem;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+      /* Keep the reading column comfortable at wide viewports */
+      .post-column {
+        max-width: 46rem;
+      }
+      figure.post-figure {
+        margin: 2.25rem 0;
+      }
+      /* Let the diagram breathe wider than the text column on large screens */
+      @media (min-width: 992px) {
+        figure.post-figure {
+          margin-left: -5rem;
+          margin-right: -5rem;
+        }
+      }
+      figure.post-figure svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      figure.post-figure figcaption {
+        font-size: 0.875rem;
+        margin-top: 0.75rem;
+      }
+      .sources li {
+        margin-bottom: 0.75rem;
+        font-size: 0.925rem;
+        line-height: 1.5;
+      }
+      /* Table 1 */
+      .post-table table {
+        font-size: 0.925rem;
+        margin-bottom: 0;
+      }
+      .post-table caption {
+        font-size: 0.875rem;
+      }
+      .post-table thead th {
+        font-size: 0.85rem;
+      }
+      /* On phones, stack each row so nothing scrolls sideways */
+      @media (max-width: 767.98px) {
+        .post-table thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+          white-space: nowrap;
+        }
+        .post-table colgroup {
+          display: none;
+        }
+        .post-table table,
+        .post-table caption,
+        .post-table tbody,
+        .post-table tr {
+          display: block;
+          width: 100%;
+        }
+        .post-table .table > tbody > tr {
+          border-top: 1px solid var(--bs-border-color);
+          padding: 0.75rem 0;
+        }
+        .post-table .table > tbody > tr > th,
+        .post-table .table > tbody > tr > td {
+          display: block;
+          width: 100%;
+          border-bottom: 0;
+          padding: 0.3rem 0;
+        }
+        .post-table .table > tbody > tr > th {
+          font-size: 1rem;
+        }
+        .post-table .table > tbody > tr > td::before {
+          content: attr(data-label);
+          display: block;
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: var(--bs-secondary-color);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Icon sprite sheet -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        ></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path
+          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+        ></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.31.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        ></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        ></path>
+      </symbol>
+    </svg>
+
+    <!-- Light / dark toggle -->
+    <div
+      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+    >
+      <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+      >
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <header class="border-bottom lh-1 py-3 text-center">
+        <a
+          class="blog-header-logo text-body-emphasis text-decoration-none"
+          href="index.html"
+          >Reading Responses</a
+        >
+      </header>
+
+      <div class="nav-scroller py-1 mb-3 border-bottom">
+        <!-- Change "Week 3" below to this post's week -->
+        <nav class="nav nav-underline justify-content-center gap-4">
+          <a class="nav-item nav-link link-body-emphasis" href="index.html">Home</a>
+          <a
+            class="nav-item nav-link link-body-emphasis active"
+            aria-current="page"
+            href="#post"
+            >Week 3</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <main class="container">
+      <!-- POST HEADER: change the title, the one-sentence summary, and the week and date -->
+      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="col-lg-8 px-0">
+          <h1 class="display-4 fst-italic">
+            Massachusetts and Boston ADU Rules and a Proposed ADU
+            Screening Tool
+          </h1>
+          <p class="lead my-3">
+            Massachusetts and Boston have both made accessory dwelling
+            units (ADUs) easier to build, through different laws, but
+            neither set of rules tells a homeowner what they can build
+            on a particular lot.
+          </p>
+          <p class="lead mb-0 text-body-secondary" style="font-size: 1rem">
+            Week 3 · September 28, 2026
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 post-column">
+          <article class="blog-post" id="post">
+            <!-- POST BODY: each paragraph goes in <p>...</p>, each section heading in <h3>...</h3> -->
+
+            <p>
+              I argue that our class should build a tool that tells owners of
+              existing one- to three-unit homes which ADU types their lot
+              likely allows by right and which building-code requirements
+              would add cost.
+            </p>
+
+            <h3 id="comparing-the-massachusetts-and-boston-adu-rules">1. Comparing the Massachusetts and Boston ADU Rules</h3>
+
+            <p>
+              The most important difference is that the state ADU law does not
+              apply to Boston. The Affordable Homes Act amended Chapter 40A,
+              the state Zoning Act, to require every other city and town to
+              allow one “Protected Use ADU” by right on qualifying lots. The
+              state’s housing office (EOHLC) notes that Boston zones under its
+              own enabling act (St. 1956, c. 665) and sets its own ADU rules.
+              Table 1 compares the two.
+            </p>
+
+            <figure class="post-figure post-table">
+              <table class="table caption-top" role="table">
+                <caption>
+                  <strong>Table 1.</strong>
+                  <em>Massachusetts and Boston ADU rules compared</em>
+                </caption>
+                <colgroup>
+                  <col style="width: 18%" />
+                  <col style="width: 41%" />
+                  <col style="width: 41%" />
+                </colgroup>
+                <thead role="rowgroup">
+                  <tr role="row">
+                    <th scope="col" role="columnheader">Question</th>
+                    <th scope="col" role="columnheader">Massachusetts (c. 40A § 3 and 760 CMR 71)</th>
+                    <th scope="col" role="columnheader">Boston (citywide and Mattapan)</th>
+                  </tr>
+                </thead>
+                <tbody role="rowgroup">
+                  <tr role="row">
+                    <th scope="row" role="rowheader">Where?</th>
+                    <td role="cell" data-label="Massachusetts">
+                      Any lot with a principal dwelling (single-, two-, or
+                      multifamily) in a district that allows single-family
+                      homes.
+                    </td>
+                    <td role="cell" data-label="Boston">
+                      The state law does not apply. Rules vary by zoning
+                      article and neighborhood, and several are being
+                      rewritten.
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <th scope="row" role="rowheader">What is allowed by right?</th>
+                    <td role="cell" data-label="Massachusetts">
+                      One ADU per lot. Towns must allow internal, attached,
+                      and detached ADUs.
+                    </td>
+                    <td role="cell" data-label="Boston">
+                      Citywide, one internal ADU that adds no floor area.
+                      Mattapan allows one non-detached and one detached ADU,
+                      up to 3–4 units per lot.
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <th scope="row" role="rowheader">When is more review required?</th>
+                    <td role="cell" data-label="Massachusetts">
+                      No special permit, except in some flood or aquifer
+                      overlays or for a second ADU. Site plan review must use
+                      clear, objective standards.
+                    </td>
+                    <td role="cell" data-label="Boston">
+                      Outside Mattapan, attached and detached ADUs need a
+                      Zoning Board of Appeal (ZBA) variance. Historic
+                      districts and some overlays add reviews.
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <th scope="row" role="rowheader">How big?</th>
+                    <td role="cell" data-label="Massachusetts">
+                      Up to 900 sq ft or half the principal dwelling’s floor
+                      area, whichever is smaller. Towns may allow more.
+                    </td>
+                    <td role="cell" data-label="Boston">
+                      Mattapan limits a non-detached ADU to the smaller of 75%
+                      of the main unit or 1,250 sq ft, and a detached ADU to
+                      1.5 stories and a floor plate of 900 sq ft or the main
+                      house’s, whichever is smaller.
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <th scope="row" role="rowheader">Who may build?</th>
+                    <td role="cell" data-label="Massachusetts">
+                      Any owner. Towns may not require owner occupancy.
+                    </td>
+                    <td role="cell" data-label="Boston">
+                      Owner-occupants only. Condos and LLC-owned properties
+                      are not eligible.
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <th scope="row" role="rowheader">What if my house does not conform?</th>
+                    <td role="cell" data-label="Massachusetts">
+                      Standards can be no stricter than for the main house. A
+                      town may not block a Protected Use ADU because the house
+                      or lot is nonconforming.
+                    </td>
+                    <td role="cell" data-label="Boston">
+                      99% of residential lots already violate a base zoning
+                      rule, so exterior changes need ZBA approval outside
+                      Mattapan and the draft districts.
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <th scope="row" role="rowheader">Building and fire codes</th>
+                    <td role="cell" colspan="2" data-label="Massachusetts and Boston">
+                      Both follow the same state codes. The residential code
+                      (IRC) covers one- and two-unit buildings. At three or
+                      more units, the International Building Code (IBC)
+                      applies and can require sprinklers and upgraded exits.
+                      Units behind the main house must meet fire-access
+                      limits.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+
+            <p>
+              Location matters more in Boston. The state law sets one minimum
+              standard for 350 municipalities. Boston’s rules vary by zoning
+              article and overlay district, and draft “Dormer” and “Decker”
+              districts for Roslindale, West Roxbury, and Hyde Park, which
+              would allow all three ADU types, are open for comment this fall.
+              A Boston owner outside Mattapan who follows state guidance would
+              wrongly conclude that a detached ADU is allowed by right. Our
+              Mattapan exercises showed that even one neighborhood requires
+              reading Article 60’s ADU provisions with the Article 2
+              definitions and Table D.
+            </p>
+
+            <p>
+              The two frameworks were also written for different housing. The
+              state law covers single-family zoning districts and sizes the
+              ADU relative to the main house. The Metropolitan Area Planning
+              Council (MAPC) reports that more than half of the 1,224 ADUs
+              permitted statewide in 2025 were detached. Much of Boston’s
+              housing is two- and three-family houses on small lots, so
+              Boston’s rules also cap total units per lot. In Mattapan’s first
+              two years under new zoning, most by-right projects were inside
+              existing buildings, with 17 basement conversions compared with 9
+              additions and 1 new building.
+            </p>
+
+            <p>
+              The frameworks also treat existing buildings differently. State
+              regulations bar towns from blocking a Protected Use ADU because
+              a house or lot is nonconforming. In Boston, most buildings
+              already exceed the base zoning limits, so whether an ADU is
+              allowed depends on how much lot coverage, floor area, and height
+              the current building already uses. Boston’s newer rules set
+              separate limits for existing homes. Mattapan allows lots with
+              ADUs to cover 50–60% of the lot, and the draft Decker-4 district
+              lets existing homes that add units reach 45 feet and four
+              stories. The state building code also affects Boston more,
+              because an internal ADU in a two-family house creates a third
+              unit and moves the building from the IRC to the IBC. An owner
+              therefore needs to know their zoning district and overlays,
+              their owner-occupancy status, the existing building’s size and
+              unit count, and the code requirements for their ADU type.
+            </p>
+
+            <h3 id="what-makes-these-rules-difficult-to-navigate">2. What Makes These Rules Difficult to Navigate</h3>
+
+            <p>
+              The first challenge is that Boston’s base zoning does not match
+              the buildings that already exist, and most ADUs are added to
+              existing buildings. Will Cohen’s September 21 presentation
+              showed me how large this mismatch is. His team found that 99% of
+              Boston’s residential lots have buildings larger than current
+              zoning allows. Most of these buildings predate the 1964 zoning
+              code. He also showed a finished basement that needed ZBA
+              approval because it exceeded the floor-area ratio limit,
+              although the exterior did not change. Gray argues that
+              as-of-right approval gives “a high degree of certainty about
+              what can and can’t be built,” while discretionary review is
+              “onerous and unpredictable” and adds fees, attorney costs,
+              hearings, and delay. Cohen’s draft zoning rewrites the limits to
+              match existing houses (“zoning that looks like our houses”), but
+              owners will have to measure their buildings against them.
+            </p>
+
+            <p>
+              The second challenge is that building and fire codes, which can
+              add major costs, do not appear on a zoning map. Sarah Dunbar’s
+              firm, Neighbor Architects, designed all twelve prototypes in the
+              ADU Guidebook and labeled each with its complexity, building
+              code, stairs, and sprinkler requirements. Her designs showed me
+              how much these requirements vary by ADU type. Adding a floor to
+              a two-unit house moves the whole building to the IBC and
+              requires sprinklers throughout. A backyard cottage stays under
+              the residential code, but because it sits behind the house, more
+              than 25 feet from the street, it needs sprinklers and a 10-foot
+              path clear of cars and trees. A basement unit needs 7′6″ of
+              headroom and bedroom egress windows and is not allowed in the
+              Coastal Flood Resiliency Overlay.
+            </p>
+
+            <p>
+              The third challenge begins after zoning allows an ADU. MAPC’s
+              <em>Living Little</em> notes that ADUs are most often built by
+              “regular homeowners, rather than professional developers,” which
+              makes them hard to finance. MAPC’s presentation put the minimum
+              cost at about $200,000, and Boston’s 0% ADU loan covers at most
+              $50,000 of construction. Mattapan rezoned about 3,600 parcels,
+              but only ten projects added units by right in the first two
+              years, and Boston permitted 34 ADUs citywide in 2024. Cohen and
+              his colleague Kathleen Onufer say the bigger early effect was
+              faster permitting for renovations and for legalizing units
+              people already lived in. Manville, Lens, and Monkkonen call
+              upzoning “necessary but not sufficient.” They note that in
+              Freemark’s Chicago study, upzoned parcels gained value but were
+              not redeveloped, and they attribute this mainly to condominium
+              ownership. For ADUs, the comparable obstacle is homeowners’
+              limited money and technical knowledge. A Jamaica Plain resident
+              quoted in the Guidebook asked for “clear guidelines… on a
+              predictable budget and timeline.”
+            </p>
+
+            <h3 id="what-a-tool-could-help-with">3. What a Tool Could Help With</h3>
+
+            <p>
+              The primary user is an owner-occupant of an existing one- to
+              three-unit Boston home. Their question is, “Given my house and
+              lot, which ADUs can I build without a ZBA variance, how big can
+              they be, and what will make them complicated or expensive?”
+              Secondary users include City ADU staff and community groups.
+            </p>
+
+            <p>
+              Existing tools mostly provide information. Boston’s zoning
+              viewer and the Neighborhood Housing Look Up report a parcel’s
+              zoning district, and the Guidebook offers designs but “does not
+              provide pre-approved plans.” The state’s MyMassADU website lets
+              owners explore options by address, but for most of Boston it
+              says that attached and detached ADUs face “a much more in-depth
+              zoning and permitting review process.” An independent
+              open-source tool for West Roxbury compares current and proposed
+              rules for each parcel but does not evaluate ADU options.
+            </p>
+
+            <p>
+              The tool would combine parcel, building, and zoning data with a
+              few facts the owner confirms, such as unit count, owner
+              occupancy, and basement height. It would test five ADU types
+              from the Guidebook (basement, attic or dormer, attached
+              addition, detached backyard unit, and garage conversion) and
+              report for each whether it is likely allowed by right, likely
+              needs ZBA relief and why, or is not possible. It would show the
+              lot coverage and floor area still available, flag code and cost
+              issues (“this would be a third unit, so expect IBC review and
+              sprinklers”), and produce a one-page summary of data,
+              assumptions, and questions for an architect or the Inspectional
+              Services Department (ISD). Where current tools report “your
+              district is Mattapan R2,” this tool might report that a basement
+              unit is the most likely by-right option and that the side yard
+              is too narrow for the 10-foot path a detached unit needs.
+            </p>
+
+            <p>
+              The tool should not issue zoning determinations, which are ISD’s
+              responsibility, and it should not certify code compliance,
+              predict ZBA votes, produce designs, give financial advice, or
+              screen tenants. Setbacks estimated from building footprints are
+              less precise than a survey, so the tool should flag results
+              close to a limit and recommend a survey.
+            </p>
+
+            <h3 id="what-we-would-need-to-build-it">4. What We Would Need to Build It</h3>
+
+            <p>
+              The first task is structuring the zoning rules. Article 60’s ADU
+              provisions and Table D, the citywide internal-ADU rules, and the
+              draft Neighborhood Housing tables must become machine-readable
+              rules that cite code sections and note whether each is draft or
+              adopted. The Guidebook’s sprinkler and fire-access checklists
+              can become a decision tree, and the City’s ADU loan program
+              could supply cost and eligibility data. For MAPC, the same
+              database could hold the state rules and local bylaws from its
+              Zoning Atlas.
+            </p>
+
+            <p>
+              Most parcel data already exists. Public datasets cover parcels,
+              zoning and overlay districts, building footprints, and assessor
+              records (units, year built, building type). We would calculate
+              lot coverage, setbacks, side-yard widths, and each building’s
+              distance from the street, as Cohen’s team and the West Roxbury
+              tool have done.
+            </p>
+
+            <p>
+              We would also need a database linking each parcel to its
+              building, zoning district, and rule version; a rules engine that
+              explains each result; API connections to City GIS services; and
+              a simple multilingual interface. We should run the tool on past
+              cases, such as Mattapan’s by-right additions and recent ZBA
+              decisions, have Planning Department staff and an architect or
+              code consultant review the encoded rules, and test with Mattapan
+              homeowners whether they understand a “likely by-right” result.
+            </p>
+
+            <p>
+              Several uncertainties remain. Draft districts may change after
+              this fall’s comment period, assessor records contain errors, and
+              some rules need interpretation, such as what counts as a
+              half-story. Code requirements depend on design, cost data is
+              scarce, and, as MAPC noted, ADU tracking is inconsistent.
+            </p>
+
+            <h3 id="recommendation">Recommendation</h3>
+
+            <p>
+              The class should focus on helping owner-occupants of existing
+              one- to three-unit homes learn which ADU types are likely
+              allowed by right on their lot, how much of the zoning limits
+              their building already uses, and which code requirements a
+              design would trigger. I would start with a pilot in Mattapan. It
+              is the only Boston neighborhood where all three ADU types are
+              allowed by right, it has two years of results to test against,
+              and statewide tools give Boston owners only general guidance.
+              Storing the zoning rules separately from the parcel data would
+              let the same tool add the Neighborhood Housing districts once
+              they are adopted, or use the state rules if MAPC is our client.
+              I would judge the tool by whether more owners bring feasible ADU
+              projects to an architect.
+            </p>
+
+            <hr class="mt-5" />
+
+            <!-- SOURCES: one <li> per source, alphabetical by author -->
+            <h3 class="h5">Sources</h3>
+            <ol class="sources">
+              <li>
+                City of Boston. ADU program pages and zoning-reform update.
+                2025. <a href="https://www.boston.gov/">boston.gov</a>
+              </li>
+              <li>
+                City of Boston Planning Department. <em>ADU Guidebook</em>. 2024.
+              </li>
+              <li>
+                City of Boston Planning Department. “Article 60 Residential
+                Zoning Amendment Fact Sheet.” 2024.
+              </li>
+              <li>
+                Cohen, Will. “Neighborhood Housing: Draft Zoning.”
+                Presentation, City of Boston Planning Department, September 21,
+                2026.
+              </li>
+              <li>
+                Dunbar, Sarah. Presentation on the <em>ADU Guidebook</em>
+                prototypes. Neighbor Architects, 2026.
+              </li>
+              <li>
+                Gray, M. Nolan. “Planning an Affordability Crisis.” Chapter 3
+                in <em>Arbitrary Lines: How Zoning Broke the American City and How
+                to Fix It</em>. Island Press, 2022.
+              </li>
+              <li>
+                The Last Unicorn, LLC. west-roxbury-zoning. GitHub repository,
+                2026.
+              </li>
+              <li>
+                Manville, Michael, Michael Lens, and Paavo Monkkonen. “Zoning
+                and Affordability: A Reply to Rodríguez-Pose and Storper.”
+                <em>Urban Studies</em> 59, no. 1 (2022): 36–58.
+              </li>
+              <li>
+                Massachusetts Clean Energy Center (MassCEC). MyMassADU. 2026.
+                <a href="https://mymassadu.org/">mymassadu.org</a>
+              </li>
+              <li>
+                Massachusetts Executive Office of Housing and Livable Communities
+                (EOHLC). 760 CMR 71.00 and “ADU FAQs.” 2025–26.
+              </li>
+              <li>
+                Metropolitan Area Planning Council (MAPC). “Implementing and
+                Advocating for ADUs in Massachusetts.” Presentation, 2026.
+              </li>
+              <li>
+                Metropolitan Area Planning Council (MAPC). <em>Living Little</em>.
+                <a href="https://living-little.mapc.org/">living-little.mapc.org</a>
+              </li>
+              <li>
+                Stell, Nate, host. “Make Housing Legal Again: Boston’s New
+                Residential Zoning Pt. 1.” <em>Plenty of Room</em>, episode 5,
+                September 5, 2026. Interview with Will Cohen and Kathleen Onufer.
+                <a href="https://plentyofroom.substack.com/p/make-housing-legal-again-bostons"
+                  >plentyofroom.substack.com</a
+                >
+              </li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-5 mt-4 text-center text-body-secondary bg-body-tertiary">
+      <p class="mb-0">
+        Built with <a href="https://getbootstrap.com/">Bootstrap</a> and
+        published with <a href="https://pages.github.com/">GitHub Pages</a>.
+      </p>
+      <p class="mb-0">
+        <a href="index.html">All entries</a> · <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Minimal light/dark mode handling (replaces Bootstrap's color-modes.js)
+      (() => {
+        "use strict";
+        const store = {
+          get() {
+            try {
+              return localStorage.getItem("theme");
+            } catch (e) {
+              return null;
+            }
+          },
+          set(v) {
+            try {
+              localStorage.setItem("theme", v);
+            } catch (e) {
+              /* storage unavailable, fall back to session-only */
+            }
+          },
+        };
+
+        const preferred = () =>
+          store.get() ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+
+        const apply = (theme) => {
+          document.documentElement.setAttribute(
+            "data-bs-theme",
+            theme === "auto"
+              ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : theme
+          );
+        };
+
+        apply(preferred());
+
+        const showActive = (value) => {
+          const btn = document.querySelector("#bd-theme");
+          if (!btn) return;
+          const active = document.querySelector(
+            `[data-bs-theme-value="${value}"]`
+          );
+          document.querySelectorAll("[data-bs-theme-value]").forEach((el) => {
+            el.classList.remove("active");
+            el.setAttribute("aria-pressed", "false");
+            const check = el.querySelector(".bi.ms-auto");
+            if (check) check.classList.add("d-none");
+          });
+          if (active) {
+            active.classList.add("active");
+            active.setAttribute("aria-pressed", "true");
+            const check = active.querySelector(".bi.ms-auto");
+            if (check) check.classList.remove("d-none");
+            const icon = active.querySelector("svg use")?.getAttribute("href");
+            const activeIcon = btn.querySelector(".theme-icon-active use");
+            if (icon && activeIcon) activeIcon.setAttribute("href", icon);
+          }
+          btn.setAttribute("aria-label", `Toggle theme (${value})`);
+        };
+
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", () => {
+            const stored = store.get();
+            if (stored !== "light" && stored !== "dark") apply(preferred());
+          });
+
+        window.addEventListener("DOMContentLoaded", () => {
+          showActive(store.get() || "auto");
+          document.querySelectorAll("[data-bs-theme-value]").forEach((el) => {
+            el.addEventListener("click", () => {
+              const value = el.getAttribute("data-bs-theme-value");
+              store.set(value);
+              apply(value);
+              showActive(value);
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
